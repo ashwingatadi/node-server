@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const hbs = require('hbs');
 
-
+const port = process.env.PORT || 3000;
 var app = express();
 
 app.set('view engine','hbs');
@@ -50,6 +50,6 @@ app.get('/help',(req, res)=>{
     });
 });
 
-app.listen(3000,()=>{
-    console.log('App started at port 3000');
+app.listen(port,()=>{
+    console.log(`App started at port ${port}`);
 });
